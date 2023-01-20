@@ -75,7 +75,10 @@ def ex_07_calcular_area_de_quadrado(lado):
     >>> ex_07_calcular_area_de_quadrado(2.5)
     'A área do quadrado com esse lado é: 6.25. O dobro da área do quadrado é: 12.50'
     """
-    return
+    area = float(lado * lado)
+    ans_1 = f"A área do quadrado com esse lado é: {area:.2f}"
+    ans_2 = f"O dobro da área do quadrado é: {area * 2:.2f}"
+    return f"{ans_1}. {ans_2}"
 
 
 def ex_08_calcular_salario(valor_hora, qtd_horas):
@@ -88,7 +91,8 @@ def ex_08_calcular_salario(valor_hora, qtd_horas):
     >>> ex_08_calcular_salario("80", "55.62")
     'Seu salário desse mês é 4449.60'
     """
-    return
+    salario = float(valor_hora) * float(qtd_horas)
+    return f"Seu salário desse mês é {salario:.2f}"
 
 
 def ex_09_transformar_para_celsius():
