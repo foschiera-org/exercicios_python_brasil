@@ -13,7 +13,7 @@ def ex_02_escreva_um_numero(num):
     >>> ex_02_escreva_um_numero(42)
     O número informado foi 42.
     """
-    return
+    return f"O número informado foi {num}."
 
 
 def ex_03_imprima_a_soma_de_dois_numeros(a, b):
@@ -24,7 +24,7 @@ def ex_03_imprima_a_soma_de_dois_numeros(a, b):
     >>> ex_03_imprima_a_soma_de_dois_numeros(*numeros)
     A soma dos dois números informados é 85.
     """
-    return
+    return f"A soma dos dois números informados é {a+b}."
 
 
 def ex_04_calcular_media(notas):
@@ -34,7 +34,9 @@ def ex_04_calcular_media(notas):
     >>> ex_04_calcular_media(['7', '8','9','10'])
     A média anual é 8.5.
     """
-    return
+    notas_float = list(map(float, notas))
+    media = sum(notas_float) / len(notas_float)
+    return f"A média anual é {media}."
 
 
 def ex_05_converter_metros_para_centimetros(comprimento):
@@ -59,7 +61,8 @@ def ex_06_calcular_area_do_circulo(raio):
     >>> ex_06_calcular_area_do_circulo(2.5)
     'A área do círculo com esse raio é: 19.6344'
     """
-    return
+    area = 3.1415 * (raio*raio)
+    return f"A área do círculo com esse raio é: {area:.4f}"
 
 
 def ex_07_calcular_area_de_quadrado():
