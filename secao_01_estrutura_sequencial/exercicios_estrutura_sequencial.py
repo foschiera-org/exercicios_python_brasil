@@ -11,7 +11,7 @@ def ex_02_escreva_um_numero(num):
     https://wiki.python.org.br/EstruturaSequencial
     Faça um Programa que peça um número e então mostre a mensagem: O número informado foi [número].
     >>> ex_02_escreva_um_numero(42)
-    O número informado foi 42.
+    'O número informado foi 42.'
     """
     return f"O número informado foi {num}."
 
@@ -19,10 +19,10 @@ def ex_02_escreva_um_numero(num):
 def ex_03_imprima_a_soma_de_dois_numeros(a, b):
     """
     https://wiki.python.org.br/EstruturaSequencial
-    Faça um Programa que peça dois números inteiros e imprima a soma.
+    'Faça um Programa que peça dois números inteiros e imprima a soma.'
     >>> numeros = [42, 43]
     >>> ex_03_imprima_a_soma_de_dois_numeros(*numeros)
-    A soma dos dois números informados é 85.
+    'A soma dos dois números informados é 85.'
     """
     return f"A soma dos dois números informados é {a+b}."
 
@@ -32,7 +32,7 @@ def ex_04_calcular_media(notas):
     https://wiki.python.org.br/EstruturaSequencial
     Faça um Programa que peça as 4 notas bimestrais e mostre a média.
     >>> ex_04_calcular_media(['7', '8','9','10'])
-    A média anual é 8.5.
+    'A média anual é 8.5.'
     """
     notas_float = list(map(float, notas))
     media = sum(notas_float) / len(notas_float)
@@ -48,7 +48,7 @@ def ex_05_converter_metros_para_centimetros(comprimento):
     >>> ex_05_converter_metros_para_centimetros(3.621)
     'Transformando para centímetros dá 362.1 cm.'
     """
-    return f"Transformando para centímetros dá {comprimento * 100.0} cm."
+    return
 
 
 def ex_06_calcular_area_do_circulo(raio):
@@ -65,41 +65,28 @@ def ex_06_calcular_area_do_circulo(raio):
     return f"A área do círculo com esse raio é: {area:.4f}"
 
 
-def ex_07_calcular_area_de_quadrado():
+def ex_07_calcular_area_de_quadrado(lado):
     """
     https://wiki.python.org.br/EstruturaSequencial
-
     Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
     Mostrar a área com 2 casas decimais.
-
-    >>> from secao_01_estrutura_sequencial import ex_07_area_quadrado
-    >>> ex_07_area_quadrado.input = lambda k: '2'
-    >>> ex_07_area_quadrado.calcular_area_de_quadrado()
-    A área do quadrado com esse lado é: 4.00
-    O dobro da aŕea do quadrado é: 8.00
-    >>> ex_07_area_quadrado.input = lambda k: '2.5'
-    >>> ex_07_area_quadrado.calcular_area_de_quadrado()
-    A área do quadrado com esse lado é: 6.25
-    O dobro da aŕea do quadrado é: 12.50
-
+    >>> ex_07_calcular_area_de_quadrado(2)
+    'A área do quadrado com esse lado é: 4.00. O dobro da área do quadrado é: 8.00'
+    >>> ex_07_calcular_area_de_quadrado(2.5)
+    'A área do quadrado com esse lado é: 6.25. O dobro da área do quadrado é: 12.50'
     """
     return
 
 
-def ex_08_calcular_salario():
+def ex_08_calcular_salario(valor_hora, qtd_horas):
     """
     https://wiki.python.org.br/EstruturaSequencial
 
     Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês.
     Calcule e mostre o total do seu salário no referido mês.
     Mostrar salário com duas casas decimais
-
-    >>> from secao_01_estrutura_sequencial import ex_08_horas_trabalhadas_mes
-    >>> numeros =['80', '55.62']
-    >>> ex_08_horas_trabalhadas_mes.input = lambda k: numeros.pop()
-    >>> ex_08_horas_trabalhadas_mes.calcular_salario()
-    Seu salário desse mês é 4449.60
-
+    >>> ex_08_calcular_salario("80", "55.62")
+    'Seu salário desse mês é 4449.60'
     """
     return
 
