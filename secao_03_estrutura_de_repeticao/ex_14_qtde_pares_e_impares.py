@@ -17,8 +17,6 @@ números impares.
 """
 
 
-def calcular_qtde_numeros_pares_e_impares(
-    n1, n2, n3, n4, n5, n6, n7, n8, n9, n10
-):
+def calcular_qtde_numeros_pares_e_impares(n1, n2, n3, n4, n5, n6, n7, n8, n9, n10):
     """Escreva aqui em baixo a sua solução"""
     return

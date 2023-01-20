@@ -34,4 +34,3 @@ mostre os números um ao lado do outro.
 def escrever_numeros_de_1_a_20(formato):
     """Escreva aqui em baixo a sua solução"""
     return
-
