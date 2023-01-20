@@ -10,6 +10,8 @@ def ex_02_escreva_um_numero(num):
     """
     https://wiki.python.org.br/EstruturaSequencial
     Faça um Programa que peça um número e então mostre a mensagem: O número informado foi [número].
+    >>> ex_02_escreva_um_numero(42)
+    O número informado foi 42.
     """
     return
 
@@ -19,8 +21,8 @@ def ex_03_imprima_a_soma_de_dois_numeros(a, b):
     https://wiki.python.org.br/EstruturaSequencial
     Faça um Programa que peça dois números inteiros e imprima a soma.
     >>> numeros = [42, 43]
-    >>> imprima_a_soma_de_dois_numeros(*numeros)
-    A soma dos dois números informados é 85
+    >>> ex_03_imprima_a_soma_de_dois_numeros(*numeros)
+    A soma dos dois números informados é 85.
     """
     return
 
@@ -29,43 +31,33 @@ def ex_04_calcular_media(notas):
     """
     https://wiki.python.org.br/EstruturaSequencial
     Faça um Programa que peça as 4 notas bimestrais e mostre a média.
-
-        >>> numeros =['7', '8','9','10']
-        >>> calcular_media(numeros)
-        A média anual é 8.5
+    >>> ex_04_calcular_media(['7', '8','9','10'])
+    A média anual é 8.5.
     """
     return
 
 
-def ex_05_converter_metros_para_centimetros():
+def ex_05_converter_metros_para_centimetros(comprimento):
     """
     https://wiki.python.org.br/EstruturaSequencial
     Faça um Programa que converta metros para centímetros.
-
-    >>> from secao_01_estrutura_sequencial import ex_05_metros_para_centimetros
-    >>> ex_05_metros_para_centimetros.input = lambda k: '1'
-    >>> ex_05_metros_para_centimetros.converter_metros_para_centimetros()
-    Transformando para centímetros dá 100.0 cm
-    >>> ex_05_metros_para_centimetros.input = lambda k: '3.621'
-    >>> ex_05_metros_para_centimetros.converter_metros_para_centimetros()
-    Transformando para centímetros dá 362.1 cm
-
+    >>> ex_05_converter_metros_para_centimetros(1)
+    'Transformando para centímetros dá 100.0 cm.'
+    >>> ex_05_converter_metros_para_centimetros(3.621)
+    'Transformando para centímetros dá 362.1 cm.'
     """
-    return
+    return f"Transformando para centímetros dá {comprimento * 100.0} cm."
 
 
-def ex_06_calcular_area_de_circulo():
+def ex_06_calcular_area_do_circulo(raio):
     """
     https://wiki.python.org.br/EstruturaSequencial
     Faça um Programa que peça o raio de um círculo, calcule e mostre sua área. Mostrar a área com 4 casas decimais.
     Observação: Use o valor de 3.1415 para o valor da constante π
-    >>> from secao_01_estrutura_sequencial import ex_06_area_circulo
-    >>> ex_06_area_circulo.input = lambda k: '1'
-    >>> ex_06_area_circulo.calcular_area_de_circulo()
-    A área do círculo com esse raio é: 3.1415
-    >>> ex_06_area_circulo.input = lambda k: '2.5'
-    >>> ex_06_area_circulo.calcular_area_de_circulo()
-    A área do círculo com esse raio é: 19.6344
+    >>> ex_06_calcular_area_do_circulo(1)
+    'A área do círculo com esse raio é: 3.1415'
+    >>> ex_06_calcular_area_do_circulo(2.5)
+    'A área do círculo com esse raio é: 19.6344'
     """
     return
 
