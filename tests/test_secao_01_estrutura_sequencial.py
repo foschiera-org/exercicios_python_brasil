@@ -35,57 +35,36 @@ def test_04_calcular_media(notas, expected):
     assert ex_04_calcular_media(notas) == f"A média anual é {expected}."
 
 
-@pytest.mark.parametrize("comprimento_m, expected", [(1, 100), (3.621, 362.1)])
+@pytest.mark.parametrize("comprimento_m, expected", [(1, 100.0), (3.621, 362.1)])
 def test_05_converter_metros_para_centimetros(comprimento_m, expected):
     ans = f"Transformando para centímetros dá {expected} cm."
     assert ex_05_converter_metros_para_centimetros(comprimento_m) == ans
 
 
-@pytest.mark.parametrize("raio, expected", [
-    (1, 3.1415),
-    (2.5, 19.6344)
-])
+@pytest.mark.parametrize("raio, expected", [(1, 3.1415), (2.5, 19.6344)])
 def test_06_calcular_area_de_circulo(raio, expected):
     assert ex_06_calcular_area_do_circulo(raio) == f"A área do círculo com esse raio é: {expected:.4f}"
-#
-#
-# def test_07_calcular_area_de_quadrado():
-#     """
-#     https://wiki.python.org.br/EstruturaSequencial
-#
-#     Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
-#     Mostrar a área com 2 casas decimais.
-#
-#     >>> from secao_01_estrutura_sequencial import ex_07_area_quadrado
-#     >>> ex_07_area_quadrado.input = lambda k: '2'
-#     >>> ex_07_area_quadrado.calcular_area_de_quadrado()
-#     A área do quadrado com esse lado é: 4.00
-#     O dobro da aŕea do quadrado é: 8.00
-#     >>> ex_07_area_quadrado.input = lambda k: '2.5'
-#     >>> ex_07_area_quadrado.calcular_area_de_quadrado()
-#     A área do quadrado com esse lado é: 6.25
-#     O dobro da aŕea do quadrado é: 12.50
-#
-#     """
-#     return
-#
-#
-# def test_08_calcular_salario():
-#     """
-#     https://wiki.python.org.br/EstruturaSequencial
-#
-#     Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês.
-#     Calcule e mostre o total do seu salário no referido mês.
-#     Mostrar salário com duas casas decimais
-#
-#     >>> from secao_01_estrutura_sequencial import ex_08_horas_trabalhadas_mes
-#     >>> numeros =['80', '55.62']
-#     >>> ex_08_horas_trabalhadas_mes.input = lambda k: numeros.pop()
-#     >>> ex_08_horas_trabalhadas_mes.calcular_salario()
-#     Seu salário desse mês é 4449.60
-#
-#     """
-#     return
+
+
+@pytest.mark.parametrize("lado, area, dobro_area", [(2, 4, 8), (2.5, 6.25, 12.50)])
+def test_07_calcular_area_de_quadrado(lado, area, dobro_area):
+    assert (
+        ex_07_calcular_area_de_quadrado(lado)
+        == f"A área do quadrado com esse lado é: {area:.2f}. O dobro da área do quadrado é: {dobro_area:.2f}"
+    )
+
+
+@pytest.mark.parametrize(
+    "valor_hora, qtd_horas, salario",
+    [
+        ("80", "55.62", "4449.60"),
+        ("50", "40.00", "2000.00"),
+    ],
+)
+def test_08_calcular_salario(valor_hora, qtd_horas, salario):
+    assert ex_08_calcular_salario(valor_hora, qtd_horas) == f"Seu salário desse mês é {salario}"
+
+
 #
 #
 # def test_09_transformar_para_celsius():
@@ -104,8 +83,8 @@ def test_06_calcular_area_de_circulo(raio, expected):
 #     Essa temperatura é de 21 Celsius
 #     """
 #     return
-#
-#
+
+
 # def test_10_transformar_para_fahrenheit():
 #     """
 #     https://wiki.python.org.br/EstruturaSequencial
